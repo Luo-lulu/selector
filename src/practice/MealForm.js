@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Row, Col } from "antd";
 
 function MealForm(props) {
   const [choose, setChoose] = useState("");
@@ -25,18 +26,23 @@ function MealForm(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        ref={inputRef}
-        type="text"
-        className="choose__input"
-        value={choose}
-        onChange={handleInputChange}
-        name="text"
-        placeholder="Some Ideas..."
-      ></input>
-      <button className="add__btn">Add</button>
-    </form>
+    <Row justify="center">
+      <Col xs={24} sm={20} md={12}>
+        <form onSubmit={handleSubmit}>
+          <input
+            ref={inputRef}
+            type="text"
+            className="choose__input"
+            value={choose}
+            onChange={handleInputChange}
+            name="text"
+            placeholder="Some Ideas..."
+          ></input>
+
+          <button className="add__btn">Add</button>
+        </form>
+      </Col>
+    </Row>
   );
 }
 
