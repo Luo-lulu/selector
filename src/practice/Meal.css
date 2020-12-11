@@ -15,7 +15,8 @@ h2 {
   border-radius: 10px;
   margin: 2em auto;
 
-  height: 34em;
+  min-height: 60vh;
+  max-height: 90vh;
   border: 3px solid rgb(24, 14, 5);
   padding-bottom: 5%;
 }
